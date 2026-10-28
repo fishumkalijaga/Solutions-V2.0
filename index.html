@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <meta name="description" content="Solution Problems by ramalabs — analisis masalah berbasis sumber internet, asumsi kontekstual yang diturunkan dari masalah dan bukti, antitesis, pengujian kekeliruan logika, dan rekomendasi yang dapat diaudit.">
+  <meta property="og:title" content="Uji Solusi — Solution Problems | ramalabs">
+  <meta property="og:description" content="Dari pertanyaan menjadi analisis kritis yang dapat ditelusuri sumbernya.">
+  <title>Uji Solusi | ramalabs</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="export-docx.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar container">
+      <a class="brand" href="./" aria-label="Solution Problems oleh ramalabs">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+        <span class="brand-name">rama<span>labs</span><span class="brand-product">/ uji solusi</span></span>
+      </a>
+      <div class="header-right">
+        <span class="live-indicator" id="network-status"><span class="live-dot"></span> Sumber internet langsung</span>
+        <a class="header-link" href="#metodologi">Metodologi <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 17 10-10M8 7h9v9"/></svg></a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro" aria-labelledby="hero-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span> RESEARCH-DRIVEN PROBLEM SOLVING <span class="eyebrow-issue">EDISI 2026</span></div>
+        <h1 id="hero-title">Uji <span>Solusi</span></h1>
+        <p class="hero-copy">Telusuri masalah, uji asumsi dan antitesis, lalu susun rekomendasi dengan bukti yang dapat diperiksa. Lengkap dengan ekspor PDF dan Word.</p>
+        <div class="hero-tags"><span><span class="tag-check">✓</span> Bukan jawaban tanpa sumber</span><span><span class="tag-check">✓</span> Antitesis &amp; uji logika</span><span><span class="tag-check">✓</span> Tanpa API key</span></div>
+      </section>
+
+      <div class="workspace">
+        <section class="input-column" aria-label="Masukkan masalah">
+          <div class="input-card">
+            <div class="card-head"><div class="card-head-title"><span class="step-no">01</span><div><span class="overline">START WITH A QUESTION</span><h2>Rumusan masalah</h2></div></div><span class="step-status">INPUT</span></div>
+            <form id="research-form">
+              <label class="field-label" for="problem">Apa masalah yang ingin Anda selesaikan?</label>
+              <div class="textarea-wrap"><textarea id="problem" name="problem" rows="6" maxlength="1200" minlength="12" required placeholder="Contoh: Apakah penggunaan kecerdasan buatan dalam pembelajaran benar-benar meningkatkan hasil belajar mahasiswa di Indonesia?"></textarea><span class="text-counter" id="char-counter">0 / 1200</span></div>
+              <div class="field-help">Tulis satu masalah spesifik. Pertanyaan yang jelas menghasilkan pencarian literatur lebih relevan.</div>
+              <div class="divider"></div>
+              <div class="field-row">
+                <div class="field-group"><label for="domain">Bidang analisis</label><div class="select-wrap"><select id="domain" name="domain"><option value="auto">Deteksi otomatis</option><option value="education">Pendidikan</option><option value="economy">Ekonomi &amp; bisnis</option><option value="health">Kesehatan masyarakat</option><option value="environment">Lingkungan</option><option value="technology">Teknologi &amp; AI</option><option value="public">Kebijakan publik</option></select></div></div>
+                <div class="field-group"><label for="region">Fokus wilayah</label><div class="select-wrap"><select id="region" name="region"><option value="indonesia">Indonesia</option><option value="global">Global</option></select></div></div>
+              </div>
+              <div class="field-row period-row"><div class="field-group"><label for="period">Rentang literatur</label><div class="select-wrap"><select id="period" name="period"><option value="5">5 tahun terakhir</option><option value="10" selected>10 tahun terakhir</option><option value="0">Semua tahun</option></select></div></div><div class="field-group"><label for="language">Wikipedia</label><div class="select-wrap"><select id="language" name="language"><option value="id" selected>Bahasa Indonesia</option><option value="en">Bahasa Inggris</option></select></div></div></div>
+              <button type="submit" class="primary-btn" id="analyze-btn"><span class="btn-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 12 4 4L20 4M4 20h16"/></svg></span><span id="analyze-label">Analisis masalah sekarang</span><svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+              <button type="button" id="cancel-btn" class="cancel-btn" hidden>Batalkan pencarian</button>
+              <p class="privacy-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg> Pertanyaan dikirim hanya ke API sumber terbuka, bukan disimpan di server ramalabs.</p>
+            </form>
+          </div>
+          <div class="ideas-card"><div class="ideas-heading"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6m-5 4h4m-2-20a7 7 0 0 0-4 12.74V17h8v-2.26A7 7 0 0 0 12 2Z"/></svg><span>BUTUH INSPIRASI?</span></div><p>Coba salah satu pertanyaan berikut.</p><div class="example-list"><button class="example" type="button" data-question="Apakah penggunaan kecerdasan buatan meningkatkan hasil belajar mahasiswa di Indonesia?" data-domain="education">Dampak AI pada hasil belajar mahasiswa <span>↗</span></button><button class="example" type="button" data-question="Apakah penggunaan internet berdampak pada pertumbuhan ekonomi Indonesia?" data-domain="economy">Internet dan pertumbuhan ekonomi <span>↗</span></button><button class="example" type="button" data-question="Apakah emisi karbon berkaitan dengan perubahan iklim dan kebijakan lingkungan di Indonesia?" data-domain="environment">Emisi karbon dan kebijakan lingkungan <span>↗</span></button></div></div>
+        </section>
+
+        <section class="result-column" aria-label="Hasil analisis" id="result-column">
+          <div class="result-toolbar"><div class="result-toolbar-label"><span class="result-pulse" id="result-pulse"></span><span id="result-label">RESEARCH CANVAS</span></div><div class="result-actions" id="result-actions" hidden>
+              <button type="button" id="pdf-btn" class="export-prominent" title="Cetak atau simpan sebagai PDF" aria-label="Cetak atau simpan laporan sebagai PDF"><span class="file-label">Cetak PDF</span><span>↗</span></button>
+              <button type="button" id="word-btn" class="export-prominent" title="Unduh dokumen Word (.docx)" aria-label="Unduh laporan sebagai Word DOCX"><span class="file-label">Unduh Word</span><span>↓</span></button>
+              <button type="button" id="rerun-btn" class="research-action" title="Riset ulang dengan masalah dan pengaturan saat ini">↻ <span>Riset Ulang</span></button>
+              <button type="button" id="back-input-btn" class="research-action" title="Kembali mengedit rumusan masalah">← <span>Kembali ke Input</span></button>
+              <button type="button" id="copy-btn" title="Salin analisis" aria-label="Salin analisis"><svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg></button><button type="button" id="markdown-btn" title="Unduh Markdown" aria-label="Unduh Markdown"><svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 17v3h14v-3"/></svg><span> .md</span></button><button type="button" id="json-btn" title="Unduh JSON" aria-label="Unduh JSON"><svg viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 17v3h14v-3"/></svg><span> .json</span></button></div></div>
+          <div class="canvas empty-canvas" id="canvas" aria-live="polite"><div class="empty-state"><div class="empty-art" aria-hidden="true"><div class="art-circle art-circle-1"></div><div class="art-circle art-circle-2"></div><div class="art-center"><svg viewBox="0 0 110 110"><path d="M24 27h62v56H24zM36 41h37M36 53h29M36 65h17"/><circle cx="75" cy="74" r="18"/><path d="m88 87 14 14"/></svg></div><span class="art-star star-one">✳</span><span class="art-star star-two">✦</span><span class="art-star star-three">+</span></div><span class="empty-kicker">READY FOR DISCOVERY</span><h2>Riset yang dimulai<br>dari rasa ingin tahu.</h2><p>Masukkan sebuah masalah untuk menyusun kerangka analisis yang dilengkapi referensi aktual, hipotesis tandingan, dan rekomendasi terukur.</p><div class="empty-steps"><span><b>01</b> Asumsi</span><span class="step-connector">→</span><span><b>02</b> Bukti</span><span class="step-connector">→</span><span><b>03</b> Uji kritis</span><span class="step-connector">→</span><span><b>04</b> Solusi</span></div></div></div>
+          <p class="results-footnote" id="results-footnote">Hasil analisis bersifat eksploratif dan tidak menggantikan telaah sumber primer atau penilaian pakar.</p>
+        </section>
+      </div>
+
+      <section id="metodologi" class="method-section"><div class="method-intro"><span class="section-label">TRANSPARANSI METODE</span><h2>Penalaran yang dapat<br><em>ditelusuri.</em></h2><p>Aplikasi ini bekerja di browser, tanpa server pribadi dan tanpa bergantung pada model generatif. Teks analisis disusun melalui aturan eksplisit berdasarkan hasil pencarian aktual.</p></div><div class="method-grid"><article class="method-item"><div class="method-number">01 / DISCOVER</div><h3>Pencarian sumber</h3><p>Metadata dan abstrak karya ilmiah dari OpenAlex serta Crossref, konteks ensiklopedis Wikipedia, dan indikator World Bank bila sesuai.</p></article><article class="method-item"><div class="method-number">02 / CHALLENGE</div><h3>Uji klaim</h3><p>Asumsi dinarasikan dari pertanyaan dan sumber aktual, lalu dipisahkan dari fakta. Antitesis menjadi hipotesis yang dapat difalsifikasi; risiko kekeliruan logika ditandai, bukan langsung dituduhkan.</p></article><article class="method-item"><div class="method-number">03 / DECIDE</div><h3>Rekomendasi bersyarat</h3><p>Saran mempertimbangkan keterbatasan sumber, kebutuhan uji kausal, dan langkah pengumpulan data lanjutan.</p></article></div></section>
+    </main>
+    <footer class="footer"><div class="container footer-content"><div><strong>rama<span>labs</span></strong><span class="footer-divider"></span><span>Copyright © 2026 ramalabs. All rights reserved.</span></div><span>Solution Problems · Evidence before certainty.</span></div></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
